@@ -14,7 +14,7 @@ const BillsPage = () => {
   // Fetch all items
   const getAllItems = async () => {
     try {
-      const { data } = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/bills/get-bill`);
+      const { data } = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/bills/get-bill`);
       setItemsData(data);
       console.log(data);
     } catch (error) {
@@ -25,7 +25,7 @@ const BillsPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/bills/delete-bill/${id}`);
+      await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/api/bills/delete-bill/${id}`);
       message.success('Bill deleted successfully!');
       getAllItems();
     } catch (error) {
