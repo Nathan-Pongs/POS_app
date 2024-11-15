@@ -62,7 +62,7 @@ const CartPage = () => {
       await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/bills/add-bill`, newBill);
       message.success('Bill generated successfully!');
 
-      await axios.post('/api/customer/add-customer', newCustomer);
+      await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/customer/add-customer`, newCustomer);
       
       // Clear cart after successful bill generation
       dispatch({ type: 'CLEAR_CART' });
