@@ -4,6 +4,10 @@
       {
         "src": "server.js",
         "use": "@vercel/node"
+      },
+      {
+        "src": "seeder.js", 
+        "use": "@vercel/node"
       }
     ],
     "routes": [
@@ -12,4 +16,4 @@
         "dest": "server.js"
       }
     ]
-  }  
+  }
